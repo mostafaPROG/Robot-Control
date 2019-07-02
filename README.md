@@ -22,7 +22,7 @@ You can download the installer file from this [link](https://drive.google.com/op
 application requires [android](https://nodejs.org/) v4.4+ to run.
 
 
-![Alt text](https://github.com/mostafaPROG/Robot-Control/blob/master/pic/Screenshot_2019-07-03-02-27-38.png).
+![Alt text](https://github.com/mostafaPROG/Robot-Control/blob/master/pic/Screenshot_2019-07-03-02-27-38.png =100x250).
 
 
 Home page and loading software
@@ -37,7 +37,7 @@ Page Insert IP Module
 
 Save and connect to the robot control panel
 
-![Alt text](https://github.com/mostafaPROG/Robot-Control/blob/master/pic/Screenshot_2019-07-03-02-27-58.png){: width=150 height=100 style="float:right; padding:16px"}
+![Alt text](https://github.com/mostafaPROG/Robot-Control/blob/master/pic/Screenshot_2019-07-03-02-27-58.png)
 
 
 Robot control panel
