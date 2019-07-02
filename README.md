@@ -19,7 +19,7 @@ To create an Android app, we've used Google's IDE, Android Studio. The programmi
 You can download the installer file from this [link](https://drive.google.com/open?id=1gT8FOOdMROnFBNqnen9mjMCD3Mp6vUrD)
 application requires [android](https://nodejs.org/) v4.4+ to run.
 
-![Alt text](https://github.com/mostafaPROG/Robot-Control/blob/master/pic/Screenshot_2019-07-03-02-27-38.png)
+![Alt text](https://github.com/mostafaPROG/Robot-Control/blob/master/pic/Screenshot_2019-07-03-02-27-38.png width="100")
 Home page and loading software
 
 ![Alt text](https://github.com/mostafaPROG/Robot-Control/blob/master/pic/Screenshot_2019-07-03-02-27-42.png)
