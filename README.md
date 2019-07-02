@@ -22,7 +22,7 @@ You can download the installer file from this [link](https://drive.google.com/op
 application requires [android](https://nodejs.org/) v4.4+ to run.
 
 
-![Alt text](https://github.com/mostafaPROG/Robot-Control/blob/master/pic/Screenshot_2019-07-03-02-27-38.png =100x250).
+![Alt text](https://github.com/mostafaPROG/Robot-Control/blob/master/pic/Screenshot_2019-07-03-02-27-38.png).
 
 
 Home page and loading software
