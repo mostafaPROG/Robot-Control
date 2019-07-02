@@ -37,7 +37,7 @@ Page Insert IP Module
 
 Save and connect to the robot control panel
 
-![Alt text](https://github.com/mostafaPROG/Robot-Control/blob/master/pic/Screenshot_2019-07-03-02-27-58.png).
+![Alt text](https://github.com/mostafaPROG/Robot-Control/blob/master/pic/Screenshot_2019-07-03-02-27-58.png){: width=150 height=100 style="float:right; padding:16px"}
 
 
 Robot control panel
