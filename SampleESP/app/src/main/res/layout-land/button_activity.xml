@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:toolbarId="@+id/toolbar"
+                app:contentScrim="?attr/colorPrimary">
+            <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/colorPrimary"
+                    app:layout_collapseMode="pin"
+                    android:theme="?attr/actionBarTheme"
+                    android:minHeight="?attr/actionBarSize" android:id="@+id/toolbar">
+                <ImageView android:layout_width="50dp"
+                           android:id="@+id/editName"
+                           android:layout_height="50dp"
+                           android:onClick="editClick"
+                           android:layout_gravity="right|center_vertical"
+                           android:layout_marginRight="16dp"
+                           android:src="@drawable/ic_edit_black_24dp" android:padding="10dp"/>
+                <ImageView android:layout_width="50dp"
+                           android:layout_gravity="left|center_vertical"
+                           android:visibility="invisible"
+                           android:onClick="editClick"
+                           android:id="@+id/saveName"
+                           android:layout_marginRight="16dp"
+                           android:layout_height="50dp"
+                           android:src="@drawable/ic_check_black_24dp" android:padding="10dp"/>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+                                           android:fillViewport="true"
+                                           android:layout_height="match_parent"
+                                           app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:indeterminate="true"
+                    app:mpb_progressStyle="circular"
+                    android:background="@android:color/transparent"
+                    app:mpb_progressTint="#2C2C2C"
+                    app:mpb_indeterminateTint="#302F2F"
+                    app:mpb_progressBackgroundTint="@android:color/white"
+                    style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginStart="16dp" android:id="@+id/loadingWifi"/>
+            <TextView
+                    android:text="درحال روشن کردن نقطه اتصال ..."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textLoadingWifi" android:layout_weight="1"
+                    app:layout_constraintStart_toEndOf="@+id/loadingWifi" android:layout_marginStart="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/loadingWifi"
+                    app:layout_constraintTop_toTopOf="@+id/loadingWifi"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"
+                    android:layout_marginEnd="8dp" android:textColor="#494949"/>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:focusableInTouchMode="true"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" android:layout_weight="0.6" android:layout_margin="8dp"
+                        android:background="@drawable/back_butn" android:paddingTop="8dp" android:paddingBottom="8dp">
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="0.3">
+                        <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                                android:gravity="center">
+                            <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp" android:id="@+id/button1"
+                                    android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:tag="1"
+                                    android:background="@android:color/transparent"
+                                    android:tint="@color/but_color"
+                                    android:src="@drawable/ic_keyboard_arrow_up_black_24dp"
+                                    android:scaleType="fitCenter" android:focusable="true"/>
+                            <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textPersonName"
+                                    android:text="Button 1"
+                                    android:ems="10"
+                                    android:id="@+id/editButton1" android:layout_weight="0.5"
+                                    android:layout_marginLeft="4dp" android:layout_marginRight="4dp"
+                                    android:visibility="visible" android:gravity="center"
+                                    android:enabled="false" android:background="@android:color/transparent"
+                                    android:layout_gravity="center"/>
+                        </LinearLayout>
+                        <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                                android:gravity="center">
+                            <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp" android:id="@+id/button2"
+                                    android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:tag="2"
+                                    android:background="@android:color/transparent"
+                                    android:tint="@color/but_color"
+                                    android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+                                    android:scaleType="fitCenter" android:focusable="true"
+                            />
+                            <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textPersonName"
+                                    android:text="Button 2"
+                                    android:ems="10"
+                                    android:id="@+id/editButton2" android:layout_weight="0.5"
+                                    android:layout_marginLeft="4dp" android:layout_marginRight="4dp"
+                                    android:visibility="visible" android:gravity="center"
+                                    android:enabled="false" android:background="@android:color/transparent"
+                                    android:layout_gravity="center"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="0.3">
+                        <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                                android:gravity="center">
+                            <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp" android:id="@+id/button3"
+                                    android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:tag="3"
+                                    android:background="@android:color/transparent"
+                                    android:tint="@color/but_color"
+                                    android:src="@drawable/ic_keyboard_arrow_up_black_24dp"
+                                    android:scaleType="fitCenter" android:focusable="true"
+                            />
+                            <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textPersonName"
+                                    android:text="Button 3"
+                                    android:ems="10"
+                                    android:id="@+id/editButton3" android:layout_weight="0.5"
+                                    android:layout_marginLeft="4dp" android:layout_marginRight="4dp"
+                                    android:visibility="visible" android:gravity="center"
+                                    android:enabled="false" android:background="@android:color/transparent"
+                                    android:layout_gravity="center"/>
+                        </LinearLayout>
+                        <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                                android:gravity="center">
+                            <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp" android:id="@+id/button4"
+                                    android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:tag="4"
+                                    android:background="@android:color/transparent"
+                                    android:tint="@color/but_color"
+                                    android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+                                    android:scaleType="fitCenter" android:focusable="true"
+                            />
+                            <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textPersonName"
+                                    android:text="Button 4"
+                                    android:ems="10"
+                                    android:id="@+id/editButton4" android:layout_weight="0.5"
+                                    android:layout_marginLeft="4dp" android:layout_marginRight="4dp"
+                                    android:visibility="visible" android:gravity="center"
+                                    android:enabled="false" android:background="@android:color/transparent"
+                                    android:layout_gravity="center"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" android:layout_weight="0.3">
+                        <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                                android:gravity="center">
+                            <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp" android:id="@+id/button6"
+                                    android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:tag="6"
+                                    android:background="@android:color/transparent"
+                                    android:tint="@color/but_color"
+                                    android:src="@drawable/ic_keyboard_arrow_up_black_24dp"
+                                    android:scaleType="fitCenter" android:focusable="true"
+                            />
+                            <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textPersonName"
+                                    android:text="Button 6"
+                                    android:ems="10"
+                                    android:id="@+id/editButton6" android:layout_weight="0.5"
+                                    android:layout_marginLeft="4dp" android:layout_marginRight="4dp"
+                                    android:visibility="visible" android:gravity="center"
+                                    android:enabled="false" android:background="@android:color/transparent"
+                                    android:layout_gravity="center"/>
+                        </LinearLayout>
+                        <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                                android:gravity="center">
+                            <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp" android:id="@+id/button5"
+                                    android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:tag="5"
+                                    android:background="@android:color/transparent"
+                                    android:tint="@color/but_color"
+                                    android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+                                    android:scaleType="fitCenter" android:focusable="true"
+                            />
+                            <EditText
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textPersonName"
+                                    android:text="Button 5"
+                                    android:ems="10"
+                                    android:id="@+id/editButton5" android:layout_weight="0.5"
+                                    android:layout_marginLeft="4dp" android:layout_marginRight="4dp"
+                                    android:visibility="visible" android:gravity="center"
+                                    android:enabled="false" android:background="@android:color/transparent"
+                                    android:layout_gravity="center"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" android:layout_weight="0.2" android:layout_margin="8dp"
+                        android:paddingTop="8dp" android:paddingBottom="8dp"
+                        android:background="@drawable/back_butn">
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                            android:gravity="center">
+                        <ImageButton
+                                android:layout_width="50dp"
+                                android:layout_height="50dp" android:id="@+id/button7"
+                                android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:tag="7"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/but_color"
+                                android:src="@drawable/ic_code_black_24dp"
+                                android:scaleType="fitXY" android:focusable="true"
+                        />
+                        <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPersonName"
+                                android:text="Button 7"
+                                android:ems="10"
+                                android:id="@+id/editButton7" android:layout_weight="0.5"
+                                android:layout_marginLeft="4dp" android:layout_marginRight="4dp"
+                                android:visibility="visible" android:gravity="center"
+                                android:enabled="false" android:background="@android:color/transparent"
+                                android:layout_gravity="center"/>
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                            android:gravity="center">
+                        <ImageButton
+                                android:layout_width="50dp"
+                                android:layout_height="50dp" android:id="@+id/button8"
+                                android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:tag="8"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/but_color"
+                                android:src="@drawable/ic_close_black_24dp"
+                                android:scaleType="fitXY" android:focusable="true"
+                        />
+                        <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPersonName"
+                                android:text="Button 8"
+                                android:ems="10"
+                                android:id="@+id/editButton8" android:layout_weight="0.5"
+                                android:layout_marginLeft="4dp" android:layout_marginRight="4dp"
+                                android:visibility="visible" android:gravity="center"
+                                android:enabled="false" android:background="@android:color/transparent"
+                                android:layout_gravity="center"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" android:layout_weight="0.2"
+                        android:background="@drawable/back_butn" android:layout_margin="8dp" android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp" android:gravity="center">
+                        <ImageButton
+                                android:layout_width="50dp"
+                                android:layout_height="50dp" android:id="@+id/button9"
+                                android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:tag="9"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/but_color"
+                                android:src="@drawable/ic_save_black_24dp"
+                                android:scaleType="fitXY" android:focusable="true"
+                        />
+                        <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPersonName"
+                                android:text="Button 9"
+                                android:ems="10"
+                                android:id="@+id/editButton9" android:layout_weight="0.5"
+                                android:layout_marginLeft="4dp" android:layout_marginRight="4dp"
+                                android:visibility="visible" android:gravity="center"
+                                android:enabled="false" android:background="@android:color/transparent"
+                                android:layout_gravity="center"/>
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:layout_marginTop="8dp" android:gravity="center"
+                    >
+                        <ImageButton
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:id="@+id/button10"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:tag="10"
+                                android:background="@android:color/transparent"
+                                android:tint="@color/but_color"
+                                android:src="@drawable/ic_file_download_black_24dp"
+                                android:scaleType="fitXY" android:focusable="true"/>
+                        <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPersonName"
+                                android:text="Button 10"
+                                android:ems="10"
+                                android:id="@+id/editButton10"
+                                android:layout_weight="0.5"
+                                android:visibility="visible" android:gravity="center"
+                                android:enabled="false" android:background="@android:color/transparent"
+                                android:layout_gravity="center"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

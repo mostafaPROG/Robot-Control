@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_height="fill_parent" android:layout_width="match_parent"
+              android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:theme="?attr/actionBarTheme"
+            android:minHeight="?attr/actionBarSize" android:id="@+id/toolbar">
+        <ImageView android:layout_width="50dp"
+                   android:id="@+id/editName"
+                   android:layout_height="50dp"
+                   android:onClick="editClick"
+                   android:layout_gravity="right|center_vertical"
+                   android:layout_marginRight="16dp"
+                   android:src="@drawable/ic_edit_black_24dp" android:padding="10dp"/>
+        <ImageView android:layout_width="50dp"
+                   android:layout_gravity="left|center_vertical"
+                   android:visibility="invisible"
+                   android:onClick="editClick"
+                   android:id="@+id/saveName"
+                   android:layout_marginRight="16dp"
+                   android:layout_height="50dp"
+                   android:src="@drawable/ic_check_black_24dp" android:padding="10dp"/>
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+                                           android:fillViewport="true"
+                                           android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:focusableInTouchMode="true"
+                android:layout_height="match_parent" android:layout_marginLeft="40dp" android:layout_marginRight="40dp">
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:text="Button 1"
+                        android:ems="10"
+                        android:id="@+id/editButton1" android:layout_weight="0.5"
+                        android:layout_marginLeft="30dp" android:layout_marginRight="30dp"
+                        android:visibility="visible" android:gravity="center"
+                        android:enabled="false" android:background="@android:color/transparent"
+                        android:layout_gravity="center"/>
+                <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" android:id="@+id/button1"
+                        android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:tag="1"
+                        android:background="@android:color/transparent"
+                        android:tint="@color/but_color"
+                        android:onClick="buttonClick" android:src="@drawable/ic_play_circle_filled_black_24dp"
+                        android:scaleType="fitXY"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:text="Button 2"
+                        android:ems="10"
+                        android:id="@+id/editButton2" android:layout_weight="0.5"
+                        android:layout_marginLeft="30dp" android:layout_marginRight="30dp"
+                        android:visibility="visible" android:gravity="center"
+                        android:enabled="false" android:background="@android:color/transparent"
+                        android:layout_gravity="center"/>
+                <ImageButton
+                        android:text="Button 2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" android:id="@+id/button2"
+                        android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:tag="2"
+                        android:background="@android:color/transparent"
+                        android:tint="@color/but_color"
+                        android:onClick="buttonClick" android:src="@drawable/ic_play_circle_filled_black_24dp"
+                        android:scaleType="fitXY"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:text="Button 3"
+                        android:ems="10"
+                        android:id="@+id/editButton3" android:layout_weight="0.5"
+                        android:layout_marginLeft="30dp" android:layout_marginRight="30dp"
+                        android:visibility="visible" android:gravity="center"
+                        android:enabled="false" android:background="@android:color/transparent"
+                        android:layout_gravity="center"/>
+                <ImageButton
+                        android:text="Button 3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" android:id="@+id/button3"
+                        android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:tag="3"
+                        android:background="@android:color/transparent"
+                        android:tint="@color/but_color"
+                        android:onClick="buttonClick" android:src="@drawable/ic_play_circle_filled_black_24dp"
+                        android:scaleType="fitXY"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:text="Button 4"
+                        android:ems="10"
+                        android:id="@+id/editButton4" android:layout_weight="0.5"
+                        android:layout_marginLeft="30dp" android:layout_marginRight="30dp"
+                        android:visibility="visible" android:gravity="center"
+                        android:enabled="false" android:background="@android:color/transparent"
+                        android:layout_gravity="center"/>
+                <ImageButton
+                        android:text="Button 4"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" android:id="@+id/button4"
+                        android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:tag="4"
+                        android:background="@android:color/transparent"
+                        android:tint="@color/but_color"
+                        android:onClick="buttonClick" android:src="@drawable/ic_play_circle_filled_black_24dp"
+                        android:scaleType="fitXY"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:text="Button 5"
+                        android:ems="10"
+                        android:id="@+id/editButton5" android:layout_weight="0.5"
+                        android:layout_marginLeft="30dp" android:layout_marginRight="30dp"
+                        android:visibility="visible" android:gravity="center"
+                        android:enabled="false" android:background="@android:color/transparent"
+                        android:layout_gravity="center"/>
+                <ImageButton
+                        android:text="Button 5"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" android:id="@+id/button5"
+                        android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:tag="5"
+                        android:background="@android:color/transparent"
+                        android:tint="@color/but_color"
+                        android:onClick="buttonClick" android:src="@drawable/ic_play_circle_filled_black_24dp"
+                        android:scaleType="fitXY"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:text="Button 6"
+                        android:ems="10"
+                        android:id="@+id/editButton6" android:layout_weight="0.5"
+                        android:layout_marginLeft="30dp" android:layout_marginRight="30dp"
+                        android:visibility="visible" android:gravity="center"
+                        android:enabled="false" android:background="@android:color/transparent"
+                        android:layout_gravity="center"/>
+                <ImageButton
+                        android:text="Button 6"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" android:id="@+id/button6"
+                        android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:tag="6"
+                        android:background="@android:color/transparent"
+                        android:tint="@color/but_color"
+                        android:onClick="buttonClick" android:src="@drawable/ic_play_circle_filled_black_24dp"
+                        android:scaleType="fitXY"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:text="Button 7"
+                        android:ems="10"
+                        android:id="@+id/editButton7" android:layout_weight="0.5"
+                        android:layout_marginLeft="30dp" android:layout_marginRight="30dp"
+                        android:visibility="visible" android:gravity="center"
+                        android:enabled="false" android:background="@android:color/transparent"
+                        android:layout_gravity="center"/>
+                <ImageButton
+                        android:text="Button 7"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" android:id="@+id/button7"
+                        android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:tag="7"
+                        android:background="@android:color/transparent"
+                        android:tint="@color/but_color"
+                        android:onClick="buttonClick" android:src="@drawable/ic_play_circle_filled_black_24dp"
+                        android:scaleType="fitXY"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:text="Button 8"
+                        android:ems="10"
+                        android:id="@+id/editButton8" android:layout_weight="0.5"
+                        android:layout_marginLeft="30dp" android:layout_marginRight="30dp"
+                        android:visibility="visible" android:gravity="center"
+                        android:enabled="false" android:background="@android:color/transparent"
+                        android:layout_gravity="center"/>
+                <ImageButton
+                        android:text="Button 8"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" android:id="@+id/button8"
+                        android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:tag="8"
+                        android:background="@android:color/transparent"
+                        android:tint="@color/but_color"
+                        android:onClick="buttonClick" android:src="@drawable/ic_play_circle_filled_black_24dp"
+                        android:scaleType="fitXY"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:text="Button 9"
+                        android:ems="10"
+                        android:id="@+id/editButton9" android:layout_weight="0.5"
+                        android:layout_marginLeft="30dp" android:layout_marginRight="30dp"
+                        android:visibility="visible" android:gravity="center"
+                        android:enabled="false" android:background="@android:color/transparent"
+                        android:layout_gravity="center"/>
+                <ImageButton
+                        android:text="Button 9"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" android:id="@+id/button9"
+                        android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:tag="9"
+                        android:background="@android:color/transparent"
+                        android:tint="@color/but_color"
+                        android:onClick="buttonClick" android:src="@drawable/ic_play_circle_filled_black_24dp"
+                        android:scaleType="fitXY"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="40dp"
+                    android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:text="Button 10"
+                        android:ems="10"
+                        android:id="@+id/editButton10"
+                        android:layout_weight="0.5"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:visibility="visible" android:gravity="center"
+                        android:enabled="false" android:background="@android:color/transparent"
+                        android:layout_gravity="center"/>
+                <ImageButton
+                        android:text="Button 10"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/button10"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:tag="10"
+                        android:background="@android:color/transparent"
+                        android:tint="@color/but_color"
+                        android:onClick="buttonClick" android:src="@drawable/ic_play_circle_filled_black_24dp"
+                        android:scaleType="fitXY"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
